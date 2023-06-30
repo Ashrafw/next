@@ -6,6 +6,7 @@ import Editor from "./Editor/Editor";
 import { ThemeProvider } from "styled-components";
 import { color } from "@codemirror/theme-one-dark";
 import { AppWrapper } from "./App.styles";
+import InteractiveComp from "./InteractiveComp/InteractiveComp";
 
 const darkTheme = {
   background: "#282c34",
@@ -30,6 +31,7 @@ function App() {
           <Navbar setNightMode={setNightMode} nightMode={nightMode} />
           <Questions questionNumber={questionNumber} setQuestionNumber={setQuestionNumber} />
           <Editor questionNumber={questionNumber} />
+          <InteractiveComp questionNumber={questionNumber} />
         </div>
       </AppWrapper>
     </ThemeProvider>
