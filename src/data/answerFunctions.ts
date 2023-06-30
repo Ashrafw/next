@@ -102,8 +102,8 @@ export function fourDigitAddition(val: string) {
 
     return result;
   } else {
-    console.log("Error: value should be a single digit ");
-    return "Error: value should be a single digit ";
+    console.log("Error: value should be a single digit");
+    return "Error: value should be a single digit";
   }
 }
 

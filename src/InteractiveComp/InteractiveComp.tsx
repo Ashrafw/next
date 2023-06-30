@@ -68,7 +68,7 @@ const InteractiveComp = ({ questionNumber }: InteractiveCompProp) => {
               <button>submit</button>
             </div>
           </form>
-          {inputsThree.length > 0 ? (
+          {parseInt(inputsThree) > 0 ? (
             <>
               {" "}
               <div className="results">
