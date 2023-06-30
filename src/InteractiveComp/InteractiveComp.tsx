@@ -35,15 +35,22 @@ const InteractiveComp = ({ questionNumber }: InteractiveCompProp) => {
               <button>submit</button>
             </div>
           </form>
-          <div className="results">
-            <strong>Result:</strong> {sumOfEvenFibNum(inputsOne).sum}
-          </div>
-          <h2>The Sequence:</h2>
-          <div className="seq">
-            {sumOfEvenFibNum(inputsOne).seq.map((num) => (
-              <p className={num % 2 === 0 ? "even" : ""}>{num}</p>
-            ))}
-          </div>
+          {sumOfEvenFibNum(inputsOne).sum > 0 ? (
+            <>
+              {" "}
+              <div className="results">
+                <strong>Result:</strong> {sumOfEvenFibNum(inputsOne).sum}
+              </div>{" "}
+              <h2>The Sequence:</h2>
+              <div className="seq">
+                {sumOfEvenFibNum(inputsOne).sum > 0
+                  ? sumOfEvenFibNum(inputsOne).seq.map((num) => (
+                      <p className={num % 2 === 0 ? "even" : ""}>{num}</p>
+                    ))
+                  : null}
+              </div>
+            </>
+          ) : null}
         </div>
       ) : null}
     </InteractiveCompWrapper>

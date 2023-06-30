@@ -22,11 +22,11 @@ function fibonacciSequence(n: number) {
   if (n <= 0) {
     return [];
   } else if (n === 1) {
-    return [0];
+    return [1];
   } else if (n === 2) {
-    return [0, 1];
+    return [1, 1];
   } else {
-    var sequence = [0, 1];
+    var sequence = [1, 1];
     for (var i = 2; i < n; i++) {
       var nextNumber = sequence[i - 1] + sequence[i - 2];
       sequence.push(nextNumber);
