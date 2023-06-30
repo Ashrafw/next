@@ -16,9 +16,9 @@ const darkTheme = {
 const lightTheme = {
   background: "#b9cccd",
   color: "#282c34",
-  title: "#282c34",
-  bgTitle: "white",
   titleColor: "white",
+  bgTitle: "white",
+  title: "#282c34",
 };
 function App() {
   const [questionNumber, setQuestionNumber] = React.useState(1);
