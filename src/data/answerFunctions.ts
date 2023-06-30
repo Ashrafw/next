@@ -87,7 +87,7 @@ export function containEvenNum(number: string) {
 
 /////////////////////////////////////////////////////////
 
-export function fourDigitAddition(val: number) {
+export function fourDigitAddition(val: string) {
   // Convert the digit to a string
   var digit = val.toString();
   if (digit.length === 1) {
