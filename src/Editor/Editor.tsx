@@ -24,13 +24,23 @@ const Editor = ({ questionNumber }: EditorProps) => {
     if (questionNumber === 4) return code4;
   };
   return (
-    <div className="">
+    <div
+      className=""
+      style={{
+        border: "2px solid white",
+        borderRadius: "12px",
+        padding: "5px",
+        fontSize: "18px",
+        backgroundColor: "#282c34",
+      }}
+    >
       <CodeMirror
         value={handleQuestionChange()}
         // value="console.log('hello world!');"
         // height="200px"
         extensions={[javascript({ jsx: true })]}
         theme={oneDark}
+        readOnly={true}
       />
     </div>
   );
