@@ -5,11 +5,12 @@ import Navbar from "./Navbar/Navbar";
 import Editor from "./Editor/Editor";
 
 function App() {
+  const [questionNumber, setQuestionNumber] = React.useState(1);
   return (
     <div className="App">
       <Navbar />
-      <Questions />
-      <Editor />
+      <Questions questionNumber={questionNumber} setQuestionNumber={setQuestionNumber} />
+      <Editor questionNumber={questionNumber} />
     </div>
   );
 }

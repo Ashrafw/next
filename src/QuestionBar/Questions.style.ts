@@ -6,6 +6,8 @@ export const QuestionWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
     .question {
       border: 2px solid white;
       padding: 6px 16px;

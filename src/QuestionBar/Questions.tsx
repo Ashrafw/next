@@ -1,38 +1,42 @@
 import React from "react";
 import { QuestionWrapper } from "./Questions.style";
+import { Dispatch, SetStateAction } from "react";
 
-const Questions = () => {
-  const [questionNum, setQuestionNum] = React.useState(1);
+type QuestionsProps = {
+  questionNumber: number;
+  setQuestionNumber: Dispatch<SetStateAction<number>>;
+};
+const Questions = ({ questionNumber, setQuestionNumber }: QuestionsProps) => {
   return (
     <QuestionWrapper>
       <div className="questions">
         <div
-          className={questionNum === 1 ? "question selected" : "question"}
-          onClick={() => setQuestionNum(1)}
+          className={questionNumber === 1 ? "question selected" : "question"}
+          onClick={() => setQuestionNumber(1)}
         >
-          1. Fibonacci numbers
+          Question 1
         </div>
         <div
-          className={questionNum === 2 ? "question selected" : "question"}
-          onClick={() => setQuestionNum(2)}
+          className={questionNumber === 2 ? "question selected" : "question"}
+          onClick={() => setQuestionNumber(2)}
         >
-          2. Sorting Array
+          Question 2
         </div>
         <div
-          className={questionNum === 3 ? "question selected" : "question"}
-          onClick={() => setQuestionNum(3)}
+          className={questionNumber === 3 ? "question selected" : "question"}
+          onClick={() => setQuestionNumber(3)}
         >
-          3. Integer Number Decimal
+          Question 3
         </div>
         <div
-          className={questionNum === 4 ? "question selected" : "question"}
-          onClick={() => setQuestionNum(4)}
+          className={questionNumber === 4 ? "question selected" : "question"}
+          onClick={() => setQuestionNumber(4)}
         >
-          4. Digit return place value digit.
+          Question 4
         </div>
       </div>
       <div className="the-question">
-        {questionNum === 1 ? (
+        {questionNumber === 1 ? (
           <>
             <strong>Question 1.</strong>
             <div className="content">
@@ -77,7 +81,7 @@ const Questions = () => {
           </>
         ) : null}
 
-        {questionNum === 2 ? (
+        {questionNumber === 2 ? (
           <>
             <strong>Question 2.</strong>
             <div className="content">
@@ -92,7 +96,7 @@ const Questions = () => {
           </>
         ) : null}
 
-        {questionNum === 3 ? (
+        {questionNumber === 3 ? (
           <>
             <strong>Question 3.</strong>
             <div className="content">
@@ -107,7 +111,7 @@ const Questions = () => {
           </>
         ) : null}
 
-        {questionNum === 4 ? (
+        {questionNumber === 4 ? (
           <>
             <strong>Question 4.</strong>
             <div className="content">
