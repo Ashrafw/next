@@ -64,7 +64,7 @@ export function findSharedNumbers(arr1: number[], arr2: number[]) {
 
 /////////////////////////////////////////////////////////
 
-export function containEvenNum(number: number) {
+export function containEvenNum(number: string) {
   var numberString = number.toString();
 
   for (var i = 0; i < numberString.length; i++) {
